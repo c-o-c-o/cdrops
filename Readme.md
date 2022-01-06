@@ -32,5 +32,5 @@ This software is released under the MIT License, see LICENSE.
     https://github.com/oov/forcepser  
   改変元ファイル  
     https://github.com/oov/forcepser/blob/master/src/go/gcmz.go  
-  改変後ファイル
-    https://github.com/c-o-c-o/cdrops/blob/master/gcmz/gcmz.go
+  改変後ファイル  
+    https://github.com/c-o-c-o/cdrops/blob/master/gcmz/gcmz.go  
