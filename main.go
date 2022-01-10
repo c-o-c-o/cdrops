@@ -15,7 +15,7 @@ func main() {
 
 	data, err := gcmz.ReadGCMZDropsData()
 	if err != nil {
-		print(err.Error())
+		panic(err.Error())
 	}
 
 	for _, p := range params {
@@ -23,14 +23,12 @@ func main() {
 
 		layer, err := strconv.Atoi(v[0])
 		if err != nil {
-			print(err.Error())
-			return
+			panic(err.Error())
 		}
 
 		msAdv, err := strconv.Atoi(v[1])
 		if err != nil {
-			print(err.Error())
-			return
+			panic(err.Error())
 		}
 
 		paths := v[2:]
