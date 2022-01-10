@@ -1,0 +1,29 @@
+project_name: cdrops
+before:
+  hooks:
+    - go mod tidy
+builds:
+  - main: .
+    binary: cdrops
+    ldflags:
+      - -s -w
+      - -X main.Version={{.Version}}
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - windows
+    goarch:
+      - 386
+      - amd64
+archives:
+  - name_template: "{{ .ProjectName }}-{{ .Arch }}-{{ .Tag }}"
+    format: zip
+    replacements:
+      386: x86
+      amd64: x64
+    files:
+      - Readme.md
+      - LICENCE
+    wrap_in_directory: true
+release:
+  prerelease: auto
